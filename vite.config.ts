@@ -3,7 +3,7 @@ export default {
     vueCustomBlockTransforms: {
         i18n: ({ code }) => {
             // return transformed code
-        },
+        }
     },
     cssPreprocessOptions: {
       scss: {

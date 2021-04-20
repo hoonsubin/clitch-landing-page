@@ -1,0 +1,11 @@
+@mixin roboto-bold {
+  font-family: $font-roboto;
+  font-weight: 700;
+  fint-size: 14px;
+}
+
+@mixin roboto-medium {
+  font-family: $font-roboto;
+  font-weight: 500;
+  fint-size: 12px;
+}

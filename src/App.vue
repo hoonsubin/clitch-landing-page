@@ -1,25 +1,23 @@
 <template>
-    <component :is="layout">
-        <router-view />
-    </component>
+  <div>
+    <Header />
+    <LandingPage />
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
+import { defineComponent } from 'vue';
 
-const defaultLayout = 'default';
+import Footer from '../src/components/Footer.vue';
+import Header from '../src/components/Header.vue';
+import LandingPage from '../src/views/LandingPage.vue';
 
 export default defineComponent({
-    name: 'App',
-    setup() {
-        const { currentRoute } = useRouter();
-
-        const layout = computed(() => `${currentRoute.value.meta.layout || defaultLayout}-layout`);
-
-        return {
-            layout,
-        };
-    },
+  components: {
+    Header,
+    Footer,
+    LandingPage
+  }
 });
 </script>

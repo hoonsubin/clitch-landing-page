@@ -1,0 +1,65 @@
+.br {
+  &--xxl {
+    display: none;
+
+    @include xxl-device {
+      display: block !important;
+    }
+  }
+
+  &--xl {
+    display: none;
+
+    @include xl-device {
+      display: block !important;
+    }
+  }
+
+  &--lg {
+    display: none;
+
+    @include lg-device {
+      display: block !important;
+    }
+  }
+
+  &--md {
+    display: none;
+
+    @include md-device {
+      display: block !important;
+    }
+  }
+
+  &--sm {
+    display: none;
+
+    @include sm-device {
+      display: block !important;
+    }
+  }
+
+  &--xs {
+    display: none;
+
+    @include xs-device {
+      display: block !important;
+    }
+  }
+
+  &--sp {
+    display: none;
+
+    @include sp-device {
+      display: block !important;
+    }
+  }
+
+  &--lg-more {
+    display: none;
+
+    @include lg-device-or-more {
+      display: block !important;
+    }
+  }
+}

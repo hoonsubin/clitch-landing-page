@@ -68,6 +68,10 @@ section {
     flex-direction: column;
   }
 
+  @include xxl-device {
+    max-width: $xxl-min;
+  }
+
   &__info {
     &__title {
       @include roboto-bold;

@@ -33,7 +33,7 @@ section {
   }
 
   @include xxl-device {
-    width: 85%;
+    max-width: $xxl-min;
     margin: 0 auto;
   }
 

@@ -32,7 +32,12 @@
 section {
   background: $clitch-green;
 }
+
 .MastHead {
+  @include xxl-device {
+    max-width: $xxl-min;
+  }
+
   &--background-image {
     object-fit: cover;
 
@@ -85,9 +90,14 @@ section {
       right: 0px;
       left: 0px;
       top: 154px;
+      display: none;
 
       @include xs-device-or-less {
         text-align: left;
+      }
+
+      @include md-device-or-less {
+        display: block;
       }
     }
 
@@ -138,14 +148,14 @@ section {
         }
 
         @include sp-device {
-          top: 30%;
+          top: 296px;
+          transform: translate(0, 0);
           max-width: 100%;
         }
       }
     }
 
     &__content {
-      height: 100%;
       position: absolute;
       top: 312px;
 
@@ -174,7 +184,7 @@ section {
       }
 
       @include sp-device {
-        top: 57%;
+        top: 365px;
       }
 
       &-title {

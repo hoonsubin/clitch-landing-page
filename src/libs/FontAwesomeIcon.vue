@@ -1,46 +1,42 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    :class="$props.class"
-    :viewBox="`0 0 ${width} ${height}`"
-  >
-    <path fill="currentColor" :d="svgPath" />
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" :class="className" :viewBox="`0 0 ${width} ${height}`">
+        <path fill="currentColor" :d="svgPath" />
+    </svg>
 </template>
 
-<script>
-import { defineComponent, computed } from "vue";
-import { findIconDefinition } from "@fortawesome/fontawesome-svg-core";
+<script lang="ts">
+import { defineComponent, computed } from 'vue';
+import { findIconDefinition, IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
 export default defineComponent({
-  name: "FontAwesomeIcon",
+    name: 'FontAwesomeIcon',
 
-  props: {
-    icon: {
-      type: String,
-      required: true
+    props: {
+        icon: {
+            type: String as () => IconName,
+            required: true,
+        },
+        type: {
+            type: String as () => IconPrefix,
+            default: 'fas',
+            required: false,
+        },
+        className: String,
     },
-    type: {
-      type: String,
-      default: "fas",
-      required: false
+
+    setup(props) {
+        const definition = computed(() =>
+            findIconDefinition({
+                prefix: props.type,
+                iconName: props.icon,
+            }),
+        );
+
+        const width = computed(() => definition.value.icon[0]);
+        const height = computed(() => definition.value.icon[1]);
+        const svgPath = computed(() => definition.value.icon[4]);
+
+        return { width, height, svgPath };
     },
-    class: String
-  },
-
-  setup(props) {
-    const definition = computed(() =>
-      findIconDefinition({
-        prefix: props.type,
-        iconName: props.icon
-      })
-    );
-
-    const width = computed(() => definition.value.icon[0]);
-    const height = computed(() => definition.value.icon[1]);
-    const svgPath = computed(() => definition.value.icon[4]);
-
-    return { width, height, svgPath };
-  }
 });
 </script>

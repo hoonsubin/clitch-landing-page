@@ -1,7 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 whitelist = ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple', 'pink'].reduce(
-    (result, color) => result.push(`text-${color}-600`, `bg-${color}-600`, `bg-${color}-500`) && result,
+    (result, color) =>
+        result.push(`text-${color}-600`, `bg-${color}-600`, `bg-${color}-500`) && result,
     [],
 );
 
@@ -15,7 +16,7 @@ module.exports = {
     purge: {
         layers: ['utilities'],
         enabled: process.env.NODE_ENV === 'production',
-        content: ['./public/index.html', './src/**/*.{vue,js,ts}'],
+        content: ['./index.html', './src/**/*.{vue,js,ts}'],
         options: {
             whitelist,
         },
@@ -39,5 +40,5 @@ module.exports = {
             '6xl': ['4rem', { lineHeight: '1' }],
         },
     },
-    plugins: [require('@tailwindcss/custom-forms')],
+    //plugins: [require('@tailwindcss/custom-forms')],
 };

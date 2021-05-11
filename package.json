@@ -5,6 +5,7 @@
     "scripts": {
         "start": "yarn run dev",
         "dev": "vite",
+        "serve": "yarn run build && vite preview",
         "build": "cross-env NODE_ENV=production vite build"
     },
     "dependencies": {

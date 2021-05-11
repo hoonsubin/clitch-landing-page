@@ -1,11 +1,11 @@
 // details can be found here https://github.com/vitejs/vite/blob/master/src/node/config.ts
-import { VitePWA } from 'vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue(),VitePWA()],
+    plugins: [vue(), VitePWA()],
     css: {
         preprocessorOptions: {
             scss: {

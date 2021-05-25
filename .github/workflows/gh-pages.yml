@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   build-and-deploy:
@@ -21,4 +21,3 @@ jobs:
         with:
           branch: gh-pages
           folder: ./dist
-          

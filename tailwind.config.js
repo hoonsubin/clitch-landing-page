@@ -1,44 +1,71 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-whitelist = ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple', 'pink'].reduce(
-    (result, color) =>
-        result.push(`text-${color}-600`, `bg-${color}-600`, `bg-${color}-500`) && result,
-    [],
-);
-
 module.exports = {
-    future: {
-        removeDeprecatedGapUtilities: true,
-        purgeLayersByDefault: true,
-        defaultLineHeights: true,
-        standardFontWeights: true,
-    },
-    purge: {
-        layers: ['utilities'],
-        enabled: process.env.NODE_ENV === 'production',
-        content: ['./index.html', './src/**/*.{vue,js,ts}'],
-        options: {
-            whitelist,
-        },
-    },
+    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+    darkMode: false,
     theme: {
+        fontSize: {
+            xs: '0.75rem',
+            sm: '0.875rem',
+            base: '1rem',
+            lg: '1.125rem',
+            xl: '1.25rem',
+            '2xl': '1.5rem',
+            '3xl': '1.875rem',
+            '4xl': '2.25rem',
+            '5xl': '3rem',
+            '6xl': '4rem',
+        },
         extend: {
+            colors: {
+                primary: {
+                    100: '#F2F2F2',
+                    200: '#20f7c4',
+                    300: '#1ee3b4',
+                    400: '#1ad6aa',
+                    500: '#16BC94',
+                    600: '#139c7b',
+                    700: '#118a6d',
+                    800: '#0f735b',
+                    900: '#1E2025',
+                },
+                gray: {
+                    100: '#F2F2F2',
+                    200: '#edf2f7',
+                    300: '#e2e8f0',
+                    400: '#cbd5e0',
+                    500: '#a0aec0',
+                    600: '#718096',
+                    700: '#4a5568',
+                    800: '#6A6B6B',
+                    900: '#1E2025',
+                },
+            },
             fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto', 'sans-serif'],
+            },
+            lineHeight: {
+                hero: '4.5rem',
             },
         },
-        fontSize: {
-            xs: ['0.75rem', { lineHeight: '1rem' }],
-            sm: ['0.875rem', { lineHeight: '1.25rem' }],
-            base: ['1rem', { lineHeight: '1.5rem' }],
-            lg: ['1.125rem', { lineHeight: '1.75rem' }],
-            xl: ['1.25rem', { lineHeight: '1.75rem' }],
-            '2xl': ['1.5rem', { lineHeight: '2rem' }],
-            '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-            '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-            '5xl': ['3rem', { lineHeight: '1' }],
-            '6xl': ['4rem', { lineHeight: '1' }],
+        screens: {
+            sm: '640px',
+            // => @media (min-width: 640px) { ... }
+
+            md: '768px',
+            // => @media (min-width: 768px) { ... }
+
+            lg: '1024px',
+            // => @media (min-width: 1024px) { ... }
+
+            xl: '1280px',
+            // => @media (min-width: 1280px) { ... }
+
+            '2xl': '1536px',
+            // => @media (min-width: 1536px) { ... }
+
+            '3xl': '1920px',
+            // => @media (min-width: 1920px) { ... }
         },
     },
-    //plugins: [require('@tailwindcss/custom-forms')],
+    variants: {},
+    plugins: [],
 };

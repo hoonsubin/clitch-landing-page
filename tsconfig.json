@@ -1,21 +1,38 @@
 {
     "compilerOptions": {
-        "target": "esnext",
+        "lib": ["dom", "dom.iterable", "esnext"],
         "module": "esnext",
         "moduleResolution": "node",
-        "importHelpers": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "strict": true,
-        "rootDir": "src",
         "resolveJsonModule": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "types": ["vite/client","vite-plugin-pwa/client"]
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "strict": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+        "noFallthroughCasesInSwitch": true,
+
+        "target": "es5",
+        "outDir": "dist",
+        "declaration": true,
+        "sourceMap": true,
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": false,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "jsx": "preserve",
+        "noEmit": true,
+        "isolatedModules": true
     },
-    "include": [
-      "src/**/*",
-      "node_modules/vite-plugin-pwa/client.d.ts"
-    ],
-    "exclude": ["node_modules", "build", "dist", "scripts", "tests"]
+    "exclude": ["./dist/**/*", "./node_modules/**/*"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

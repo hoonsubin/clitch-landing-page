@@ -28,6 +28,7 @@ module.exports = {
                     900: '#1E2025',
                 },
                 gray: {
+                    base: '#C4C4C4',
                     100: '#F2F2F2',
                     200: '#edf2f7',
                     300: '#e2e8f0',
@@ -39,6 +40,9 @@ module.exports = {
                     900: '#1E2025',
                 },
             },
+            borderColor: {
+                gray: '#C4C4C4',
+            },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
             },
@@ -47,6 +51,9 @@ module.exports = {
             },
         },
         screens: {
+            xs: '480px',
+            // => @media (min-width: 480px) { ... }
+
             sm: '640px',
             // => @media (min-width: 640px) { ... }
 

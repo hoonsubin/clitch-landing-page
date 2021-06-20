@@ -39,6 +39,8 @@ module.exports = {
                     800: '#6A6B6B',
                     900: '#1E2025',
                 },
+                twitter: '#1DA1F2',
+                discord: '#7289DA',
             },
             borderColor: {
                 gray: '#C4C4C4',

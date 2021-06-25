@@ -1,36 +1,34 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { ReactNode } from 'react';
 
 type IFeatureImageGridProps = {
   title: ReactNode;
   children: ReactNode;
-  imageSrc: string;
+  imageComponent: ReactNode;
   imageOnRight?: boolean;
   yPadding?: string;
   xPadding?: string;
 };
 
 const FeatureImageGrid = (props: IFeatureImageGridProps) => (
-  <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-items-stretch">
-    <div className={`section-art ${props.imageOnRight ? 'order-last' : ''}`} />
+  <div
+    className={`flex flex-col md:flex-row 2xl:max-w-screen-2xl mx-auto ${
+      props.imageOnRight ? 'md:flex-row-reverse' : ''
+    } font-bold font-robot not-sr-only`}
+  >
+    {props.imageComponent}
     <div
-      className={`max-w-screen-lg mx-auto ${props.xPadding ? props.xPadding : 'px-3'} ${
+      className={`md:mx-auto ${props.xPadding ? props.xPadding : 'px-3'} ${
         props.yPadding ? props.yPadding : 'py-16'
       }`}
     >
-      <div className="mb-12 text-center">
-        <div className="text-3xl font-bold">{props.title}</div>
-        <div className="mt-4 text-xl lg:px-36">{props.children}</div>
+      <div className="pb-12 sm:pt-6 xl:pt-12">
+        <div className="text-3xl xs:text-4xl xl:text-5xl">{props.title}</div>
+        <div className="mt-4 ml-3 text-xl xs:text-2xl xl:text-3xl xs:h-48">
+          {props.children}
+        </div>
       </div>
     </div>
-
-    <style jsx>
-      {`
-                .section-art {
-                    background-image: url('${props.imageSrc}');
-                    @apply bg-no-repeat bg-cover;
-                }
-            `}
-    </style>
   </div>
 );
 

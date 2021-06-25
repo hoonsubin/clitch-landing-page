@@ -1,19 +1,25 @@
 import React from 'react';
 
 import { FeatureImageGrid } from '../feature/FeatureImageGrid';
+import { FeatureMock1 } from '../feature/FeatureMock1';
+import { FeatureMock2 } from '../feature/FeatureMock2';
 
 const VerticalFeatures = () => (
   <>
     <div className="bg-primary-100 text-primary-900">
       <FeatureImageGrid
         title="仲間との最高の思い出を"
-        imageSrc="/assets/images/feature-mock-1.svg"
+        imageComponent={<FeatureMock1 />}
         imageOnRight
       >
-        <div className="text-primary-900 font-bold">
+        <div className="text-primary-900 font-bold text-left">
           仲間との何気ない
+          <br />
           <span className="text-primary-500">思い出のクリップ</span>
-          を、 アルバムのように
+          を、
+          <br />
+          アルバムのように
+          <br />
           <span className="text-primary-500">残す</span>
           ことができます。
         </div>
@@ -21,13 +27,20 @@ const VerticalFeatures = () => (
     </div>
 
     <div className="bg-primary-900 text-primary-100">
-      <FeatureImageGrid
-        title="一緒にしたいを見つける"
-        imageSrc="/assets/images/feature-mock-2.svg"
-      >
-        <div className="text-primary-100 font-bold">
-          様々なコミュニティが 投稿しているクリップから あなたが
-          <span className="text-primary-500">一緒にゲームをしたいと思える 仲間</span>
+      <FeatureImageGrid title="一緒にしたいを見つける" imageComponent={<FeatureMock2 />}>
+        <div className="text-primary-100 text-left">
+          様々なコミュニティが
+          <br />
+          投稿しているクリップから
+          <br />
+          あなたが
+          <span className="text-primary-500">
+            一緒にゲームをしたいと
+            <br className="hidden md:block lg:hidden" />
+            思える
+            <br className="md:hidden lg:block" />
+            仲間
+          </span>
           を見つけよう
         </div>
       </FeatureImageGrid>

@@ -14,21 +14,21 @@ const Hero = () => (
     }}
   >
     <div className="hero-cta-banner inset-0 grid justify-items-end lg:grid-cols-2 grid-rows-1">
-      <Section yPadding="pt-20 pb-20 self-center md:col-start-2">
-        <header className="text-center grid justify-items-stretch grid-cols-1 grid-rows-3">
+      <Section yPadding="pt-20 pb-20 self-center lg:col-start-2">
+        <header className="text-center grid gap-y-8 place-items-stretch grid-cols-1 grid-rows-3">
           {/* title */}
-          <h1 className="self-center text-3xl md:text-5xl text-primary-100 font-bold whitespace-pre-line leading-hero">
+          <h1 className="self-center md:self-end text-3xl md:text-5xl text-primary-100 font-bold whitespace-pre-line leading-hero">
             <span className="text-primary-100">ゲームに いつもの仲間を</span>
           </h1>
           {/* description */}
           <div className="hero-description">
-            <h2 className="text-primary-100 text-2xl md:text-4xl lg:mx-32 self-center col-start-2 lg:col-start-1">
+            <h2 className="text-primary-100 text-2xl self-center col-start-2 lg:col-start-1 md:text-4xl">
               私たちは全てのゲーマーが 「いつもの仲間」と共に、
               よりゲームを楽しめる世界を作る。
             </h2>
           </div>
           {/* button */}
-          <div className="self-end md:self-center">
+          <div className="self-end md:self-start">
             <a href="https://app.clitch.life" target="_blank" rel="noopener noreferrer">
               <Button xl>CLITCHを見に行く</Button>
             </a>
@@ -38,7 +38,7 @@ const Hero = () => (
       <style jsx>
         {`
                     .hero-description {
-                        @apply grid justify-items-end grid-cols-2 lg:grid-cols-1 grid-rows-1 md:mt-14 md:mb-16;
+                        @apply grid grid-cols-2 lg:grid-cols-1 grid-rows-1 xl:mx-36;
                     }
 
                     .hero-cta-banner {

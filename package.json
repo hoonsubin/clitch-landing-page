@@ -4,7 +4,7 @@
     "private": true,
     "description": "Landing page for CLITCH",
     "engines": {
-        "node": ">=16.0.0",
+        "node": ">=14.0.0",
         "yarn": ">=1.22.0"
     },
     "scripts": {

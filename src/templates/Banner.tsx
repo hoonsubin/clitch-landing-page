@@ -8,27 +8,14 @@ import { AppInfo } from '../utils/AppInfo';
 const Banner = () => (
   <Background color="bg-gray-base">
     <Section xPadding="px-3">
-      <div className="font-bold not-italic font-roboto text-primary-900 flex justify-around lg:items-center flex-col md:flex-row lg:h-80">
-        <div>
-          <div className="">
-            <span className="hidden xs:block text-4xl xl:text-5xl leading-none">
-              CLITCHの最新情報を
-              <br className="lg:hidden" />
-              チェックする
-            </span>
-            <span className="block xs:hidden text-4xl">CLITCH Community</span>
-          </div>
-
-          <p className="text-2xl xs:text-2xl lg:text-3xl pt-8 pl-3 mb-6">
-            CLITCHのTwitterと
-            <br className="xs:hidden md:block lg:hidden" />
-            Discordサーバーから
-            <br />
-            最新情報をチェックしよう
-          </p>
+      <div className="font-bold not-italic font-roboto text-primary-900 flex flex-wrap py-10">
+        <div className="text-4xl xl:text-5xl flex-shrink pb-10">
+          CLITCHの最新情報を
+          <br />
+          チェックする
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex-grow px-10">
           <SnsButton
             btnColor="bg-twitter"
             appLink={AppInfo.link.twitter}

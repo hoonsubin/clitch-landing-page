@@ -10,7 +10,7 @@ type IButtonProps = {
 const SnsButton = (props: IButtonProps) => (
   <a
     href={props.appLink || '#'}
-    className={`${props.btnColor || ''}`}
+    className={`${props.btnColor || ''} w-full`}
     target="_blank"
     rel="noreferrer"
   >
@@ -26,10 +26,10 @@ const SnsButton = (props: IButtonProps) => (
     <style jsx>
       {`
                 a {
-                    @apply flex items-center py-4 rounded-3xl text-center w-80 lg:w-96 font-roboto font-bold not-italic text-primary-100 relative mb-4 md:mb-6 mx-auto xs:mx-0;
+                    @apply flex items-center py-4 rounded-3xl text-center font-roboto font-bold not-italic text-primary-100 relative mb-4 md:mb-6 mx-auto xs:mx-0;
                 }
                 img {
-                    @apply w-10 lg:w-12 ml-8;
+                    @apply ml-8;
                     filter: invert(98%) sepia(13%) saturate(187%) hue-rotate(208deg)
                         brightness(117%) contrast(90%);
                 }

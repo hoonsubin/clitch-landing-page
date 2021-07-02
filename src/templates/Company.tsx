@@ -5,7 +5,7 @@ import { Background } from '../background/Background';
 const Company = () => (
   <div>
     <Background color="bg-primary-100">
-      <div className="flex flex-col items-center md:justify-around md:flex-row pb-24 px-3 max-w-screen-lg m-auto">
+      <div className="flex flex-col items-center md:justify-around md:flex-row py-12 md:py-28 px-3 max-w-screen-lg m-auto">
         <div className="font-roboto font-bold not-italic text-primary-900">
           <div className="text-4xl sm:text-5xl mb-4 sm:mb-8">COMPANY</div>
 
@@ -38,7 +38,7 @@ const Company = () => (
             </tbody>
           </table>
         </div>
-        <div className="pt-16 lg:pb-8">
+        <div className="pt-8 md:pt-8  w-40 sm:w-auto">
           <img src="/assets/images/clitch-icon.svg" alt="clitch-icon" />
         </div>
       </div>
@@ -51,11 +51,11 @@ const Company = () => (
                 }
 
                 td:nth-child(odd) {
-                    @apply text-gray-base text-sm xs:text-xl pl-2 pt-2 w-24 xs:w-32 lg:w-40;
+                    @apply text-gray-base text-xs xs:text-lg lg:text-xl px-1 pt-2 w-max xs:w-32 lg:w-40;
                 }
 
                 td:nth-child(even) {
-                    @apply text-base xs:text-xl lg:text-2xl pt-2 pr-2 w-max;
+                    @apply text-sm xs:text-lg lg:text-xl pt-2 px-1 w-max;
                 }
             `}
     </style>

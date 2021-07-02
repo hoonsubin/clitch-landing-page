@@ -9,26 +9,26 @@ const Hero = () => (
   <Background
     style={{
       backgroundImage: 'url("/assets/images/background-art-1.svg")',
-      height: '100vh',
+      height: '90vh',
       position: 'relative',
     }}
   >
-    <div className="hero-cta-banner inset-0 grid justify-items-end lg:grid-cols-2 grid-rows-1">
-      <Section yPadding="pt-20 pb-20 self-center lg:col-start-2">
-        <header className="text-center grid gap-y-8 place-items-stretch grid-cols-1 grid-rows-3">
+    <div className="hero-cta-banner inset-0 grid justify-items-center lg:grid-cols-2 grid-rows-1">
+      <Section yPadding="lg:col-start-2">
+        <header className="h-full text-center grid gap-y-8 place-items-stretch grid-cols-1 grid-rows-3">
           {/* title */}
-          <h1 className="self-center md:self-end text-3xl md:text-5xl text-primary-100 font-bold whitespace-pre-line leading-hero">
+          <h1 className="self-center text-2xl md:text-5xl text-primary-100 font-bold whitespace-pre-line leading-hero">
             <span className="text-primary-100">ゲームに いつもの仲間を</span>
           </h1>
           {/* description */}
           <div className="hero-description">
-            <h2 className="text-primary-100 text-2xl self-center col-start-2 lg:col-start-1 md:text-4xl">
+            <h2 className="text-primary-100 text-xl self-center col-start-2 lg:col-start-1 md:text-4xl">
               私たちは全てのゲーマーが 「いつもの仲間」と共に、
               よりゲームを楽しめる世界を作る。
             </h2>
           </div>
           {/* button */}
-          <div className="self-end md:self-start">
+          <div className="self-center md:mx-24">
             <a href="https://app.clitch.life" target="_blank" rel="noopener noreferrer">
               <Button xl>CLITCHを見に行く</Button>
             </a>
@@ -40,10 +40,9 @@ const Hero = () => (
                     .hero-description {
                         @apply grid grid-cols-2 lg:grid-cols-1 grid-rows-1 xl:mx-36;
                     }
-
                     .hero-cta-banner {
                         background-image: url('/assets/images/cta-banner.svg');
-                        @apply absolute bg-no-repeat bg-right bg-contain md:my-20;
+                        @apply absolute bg-no-repeat bg-right bg-contain;
                     }
                 `}
       </style>

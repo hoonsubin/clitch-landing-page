@@ -22,7 +22,7 @@ const Button = (props: IButtonProps) => {
       <style jsx>
         {`
                     .btn {
-                        @apply inline-block rounded-md text-center;
+                        @apply inline-block rounded-3xl text-center;
                     }
 
                     .btn-base {
@@ -30,7 +30,7 @@ const Button = (props: IButtonProps) => {
                     }
 
                     .btn-xl {
-                        @apply font-extrabold text-xl py-4 px-6;
+                        @apply font-extrabold text-xl py-4 px-5 w-full;
                     }
 
                     .btn-primary {

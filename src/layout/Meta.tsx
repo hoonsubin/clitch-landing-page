@@ -36,6 +36,21 @@ const Meta = (props: IMetaProps) => (
         key="icon16"
       />
       <link rel="icon" href={`${process.env.baseUrl}/favicon.ico`} key="favicon" />
+
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182972139-1" />
+      <script
+                // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'https://www.googletagmanager.com/gtag/js?id=UA-182972139-1');
+            `,
+        }}
+      />
     </Head>
     <NextSeo
       title={props.title}

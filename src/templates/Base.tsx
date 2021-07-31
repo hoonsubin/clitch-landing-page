@@ -8,7 +8,6 @@ import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { Introduction } from './Introduction';
 import { Navbar } from './Navbar';
-import { VerticalFeatures } from './VerticalFeatures';
 
 const Base = () => (
   <div className="antialiased text-primary-500">
@@ -16,7 +15,6 @@ const Base = () => (
     <Navbar />
     <Hero />
     <Introduction />
-    <VerticalFeatures />
     <Banner />
     <Company />
     <Footer />
